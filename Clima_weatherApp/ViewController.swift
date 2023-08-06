@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var temparatureLabel: UILabel!
     @IBOutlet weak var cityNameLabel: UILabel!
     
+    var cityName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,6 +27,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
+        cityName = searchTextField.text ?? ""
+        searchTextField.resignFirstResponder()
+        cityNameLabel.text = cityName
+        
+        if searchTextField.text != ""{
+            searchTextField.placeholder = "Type something"
+        }
     }
     
 
