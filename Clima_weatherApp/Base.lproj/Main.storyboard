@@ -19,6 +19,11 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="UiO-KL-6pz">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bmm-QK-cH8" appends="YES" id="BGC-wH-gVF"/>
+                                    <outletCollection property="gestureRecognizers" destination="bmm-QK-cH8" appends="YES" id="swf-w0-Gr0"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-LN-1au">
                                 <rect key="frame" x="20" y="60.000000000000007" width="40" height="38.666666666666664"/>
@@ -122,6 +127,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bmm-QK-cH8"/>
             </objects>
             <point key="canvasLocation" x="687.78625954198469" y="26.760563380281692"/>
         </scene>

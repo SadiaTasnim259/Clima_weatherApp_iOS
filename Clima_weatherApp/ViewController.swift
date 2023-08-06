@@ -18,7 +18,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
     }
     
     
@@ -31,12 +32,14 @@ class ViewController: UIViewController {
         searchTextField.resignFirstResponder()
         cityNameLabel.text = cityName
         
-        if searchTextField.text != ""{
+        if searchTextField.text == "" {
             searchTextField.placeholder = "Type something"
         }
     }
     
-
-
+    @objc func hideKeyboard(){
+        view.endEditing(true)
+    }
+    
 }
 
