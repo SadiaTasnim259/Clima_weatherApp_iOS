@@ -13,6 +13,8 @@
 		041F75692A7D533A008515E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F75672A7D533A008515E1 /* Main.storyboard */; };
 		041F756B2A7D533C008515E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041F756A2A7D533C008515E1 /* Assets.xcassets */; };
 		041F756E2A7D533C008515E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F756C2A7D533C008515E1 /* LaunchScreen.storyboard */; };
+		0444095A2A8145FD006E76BC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044409592A8145FD006E76BC /* NetworkManager.swift */; };
+		0444095C2A81463D006E76BC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444095B2A81463D006E76BC /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		041F756A2A7D533C008515E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041F756D2A7D533C008515E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041F756F2A7D533C008515E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044409592A8145FD006E76BC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0444095B2A81463D006E76BC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		041F75602A7D533A008515E1 /* Clima_weatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				044409582A8145D7006E76BC /* Network Manager */,
 				041F75612A7D533A008515E1 /* AppDelegate.swift */,
 				041F75632A7D533A008515E1 /* SceneDelegate.swift */,
 				041F75652A7D533A008515E1 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				041F756F2A7D533C008515E1 /* Info.plist */,
 			);
 			path = Clima_weatherApp;
+			sourceTree = "<group>";
+		};
+		044409582A8145D7006E76BC /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				044409592A8145FD006E76BC /* NetworkManager.swift */,
+				0444095B2A81463D006E76BC /* NetworkError.swift */,
+			);
+			name = "Network Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0444095A2A8145FD006E76BC /* NetworkManager.swift in Sources */,
 				041F75662A7D533A008515E1 /* ViewController.swift in Sources */,
 				041F75622A7D533A008515E1 /* AppDelegate.swift in Sources */,
 				041F75642A7D533A008515E1 /* SceneDelegate.swift in Sources */,
+				0444095C2A81463D006E76BC /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
