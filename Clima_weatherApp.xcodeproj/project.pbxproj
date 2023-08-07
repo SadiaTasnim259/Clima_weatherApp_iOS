@@ -15,6 +15,8 @@
 		041F756E2A7D533C008515E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F756C2A7D533C008515E1 /* LaunchScreen.storyboard */; };
 		0444095A2A8145FD006E76BC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044409592A8145FD006E76BC /* NetworkManager.swift */; };
 		0444095C2A81463D006E76BC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444095B2A81463D006E76BC /* NetworkError.swift */; };
+		0444095F2A814A3A006E76BC /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444095E2A814A3A006E76BC /* EventHandler.swift */; };
+		044409612A814A5B006E76BC /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044409602A814A5B006E76BC /* URLConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		041F756F2A7D533C008515E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044409592A8145FD006E76BC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0444095B2A81463D006E76BC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0444095E2A814A3A006E76BC /* EventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
+		044409602A814A5B006E76BC /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		041F75602A7D533A008515E1 /* Clima_weatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				0444095D2A81467F006E76BC /* Constant */,
 				044409582A8145D7006E76BC /* Network Manager */,
 				041F75612A7D533A008515E1 /* AppDelegate.swift */,
 				041F75632A7D533A008515E1 /* SceneDelegate.swift */,
@@ -79,6 +84,15 @@
 				0444095B2A81463D006E76BC /* NetworkError.swift */,
 			);
 			name = "Network Manager";
+			sourceTree = "<group>";
+		};
+		0444095D2A81467F006E76BC /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				0444095E2A814A3A006E76BC /* EventHandler.swift */,
+				044409602A814A5B006E76BC /* URLConstant.swift */,
+			);
+			name = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0444095A2A8145FD006E76BC /* NetworkManager.swift in Sources */,
+				0444095F2A814A3A006E76BC /* EventHandler.swift in Sources */,
 				041F75662A7D533A008515E1 /* ViewController.swift in Sources */,
+				044409612A814A5B006E76BC /* URLConstant.swift in Sources */,
 				041F75622A7D533A008515E1 /* AppDelegate.swift in Sources */,
 				041F75642A7D533A008515E1 /* SceneDelegate.swift in Sources */,
 				0444095C2A81463D006E76BC /* NetworkError.swift in Sources */,
