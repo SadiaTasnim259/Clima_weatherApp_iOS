@@ -8,11 +8,5 @@
 import Foundation
 
 enum API{
-    static let BASE_URL = "http://192.168.0.227:3000/"
-    
-    static let GET_ALL_PRODUCTS = BASE_URL+"products"
-    static let POST_PRODUCT = BASE_URL+"product"
-    static let DELETE_PRODUCT = BASE_URL+"products/"
-    
-    static let UPDATE_PRODUCT = BASE_URL+"products/"
+    static let BASE_URL = "https://api.openweathermap.org/data/2.5/weather?appid=41a12ee02ac8abcd18c3eba2909fbad0&units=metric"
 }
