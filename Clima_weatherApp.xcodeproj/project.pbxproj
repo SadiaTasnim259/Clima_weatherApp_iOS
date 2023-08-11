@@ -70,12 +70,11 @@
 		041F75602A7D533A008515E1 /* Clima_weatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				0425152E2A86242A00C56CDF /* Extension */,
-				0444095D2A81467F006E76BC /* Constant */,
-				044409582A8145D7006E76BC /* Network Manager */,
 				04F8EB622A855696007B4D37 /* Application */,
+				0444095D2A81467F006E76BC /* Constant */,
+				0425152E2A86242A00C56CDF /* Extension */,
+				044409582A8145D7006E76BC /* Network Manager */,
 				04F8EB642A8556F3007B4D37 /* Screens */,
-				0425152B2A86135600C56CDF /* ViewModel */,
 				04F8EB632A8556C0007B4D37 /* Storyboard */,
 				041F756A2A7D533C008515E1 /* Assets.xcassets */,
 				041F756F2A7D533C008515E1 /* Info.plist */,
@@ -148,6 +147,7 @@
 			children = (
 				042515282A860E4500C56CDF /* Model */,
 				04F8EB652A855708007B4D37 /* View */,
+				0425152B2A86135600C56CDF /* ViewModel */,
 			);
 			name = Screens;
 			sourceTree = "<group>";

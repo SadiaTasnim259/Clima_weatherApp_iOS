@@ -29,7 +29,6 @@ class WeatherViewModel {
                     guard let cityName =  success.name else {return}
                     guard let temperature =  success.main?.temp else {return}
                     
-                    
                     let weatherModel = WeatherModel(conditionId: conditionId, cityName: cityName, temperature: temperature)
                     
                     self.delegate?.showWeatherData(weatherModel: weatherModel)
