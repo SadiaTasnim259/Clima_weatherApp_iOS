@@ -46,7 +46,8 @@ class ViewController: UIViewController {
 
 extension ViewController: WeatherProtocol{
     func showWeatherData(weatherModel: WeatherModel) {
-        temparatureLabel.text = "\(weatherModel.temperature)"
+        temparatureLabel.text = "\(weatherModel.temperatureString)"
+        weatherConditionView.image = UIImage(systemName: weatherModel.ConditionName)
     }
     
     func showWeatherError(error: Error) {
