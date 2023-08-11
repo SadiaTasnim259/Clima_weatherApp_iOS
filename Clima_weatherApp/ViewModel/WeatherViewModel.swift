@@ -20,26 +20,20 @@ class WeatherViewModel {
     
     func getWeatherData(cityName: String){
         
-        NetworkManager.shared.httpRequest(urlString: API.CITY_NAME_URL+cityName, httpMethodType: .GET, respnseType: WeatherModel.self) { result in
+        NetworkManager.shared.httpRequest(urlString: API.CITY_NAME_URL+cityName, httpMethodType: .GET, respnseType: WeatherData.self) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let success):
-                    self.delegate?.showWeatherData(weatherModel: success)
-                case .failure(let failure):
-                    self.delegate?.showWeatherError(error: failure)
-                }
-            }
-           
-        }
-    }
-    
-    func getWeatherByLatLong(cityName: String){
-        
-        NetworkManager.shared.httpRequest(urlString: API.CITY_NAME_URL+cityName, httpMethodType: .GET, respnseType: WeatherModel.self) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let success):
-                    self.delegate?.showWeatherData(weatherModel: success)
+                    
+                    guard let conditionId =  success.weather?[0].id else {return}
+                    guard let cityName =  success.name else {return}
+                    guard let temperature =  success.main?.temp else {return}
+                    
+                    
+                    let weatherModel = WeatherModel(conditionId: conditionId, cityName: cityName, temperature: temperature)
+                    
+                    self.delegate?.showWeatherData(weatherModel: weatherModel)
+                    
                 case .failure(let failure):
                     self.delegate?.showWeatherError(error: failure)
                 }

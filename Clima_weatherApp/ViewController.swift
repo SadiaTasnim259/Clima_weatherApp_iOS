@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
 extension ViewController: WeatherProtocol{
     func showWeatherData(weatherModel: WeatherModel) {
-        temparatureLabel.text = "\(weatherModel.main?.temp ?? 0.0)"
+        temparatureLabel.text = "\(weatherModel.temperature)"
     }
     
     func showWeatherError(error: Error) {

@@ -1,5 +1,5 @@
 //
-//  GetWeatherModel.swift
+//  WeatherModel.swift
 //  Clima_weatherApp
 //
 //  Created by Sadia on 11/8/23.
@@ -7,17 +7,34 @@
 
 import Foundation
 
-struct WeatherModel: Codable{
-    var name: String?
-    var main: Main?
-    var weather: [Weather]?
-}
+struct WeatherModel {
+    let conditionId: Int
+    let cityName: String
+    let temperature: Double
+    
+    var temperatureString: String{
+        return String(format: "%.1f", temperature)
+    }
+    
+    var ConditionName:String {
+        switch conditionId{
+                case 200...232:
+                    return "cloud.bolt"
+                case 300...321:
+                    return "cloud.drizzle"
+                case 500...531:
+                    return "cloud.rain"
+                case 600...622:
+                    return "cloud.snow"
+                case 701...781:
+                    return "cloud.fog"
+                case 800:
+                    return "sun.max"
+                case 801...804:
+                    return "cloud.bolt"
+                default:
+                    return "cloud"
 
-struct Main: Codable {
-    var temp: Double?
-}
-
-struct Weather: Codable {
-    var id: Int?
-    var main, description, icon: String?
+        }
+    }
 }
