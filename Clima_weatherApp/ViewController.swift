@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
+        locationManager.requestLocation()
     }
     
     
@@ -62,7 +63,19 @@ extension ViewController: WeatherProtocol{
 }
 
 extension ViewController: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last{
+            locationManager.stopUpdatingLocation()
+            let lat = location.coordinate.latitude
+            let lon = location.coordinate.longitude
+            
+            weatherViewModel.getWeatherData(latitude: lat, longitude: lon)
+        }
+    }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Location Error : \(error.localizedDescription)")
+    }
 }
 
                                                                         

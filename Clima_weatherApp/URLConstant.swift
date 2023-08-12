@@ -10,7 +10,4 @@ import Foundation
 enum API{
     static let BASE_URL = "https://api.openweathermap.org/data/2.5/weather?appid=41a12ee02ac8abcd18c3eba2909fbad0&units=metric"
     static let CITY_NAME_URL = BASE_URL+"&q="
-    static let CURRENT_LOCATION_BASED_URL = BASE_URL
-    
-    
 }
