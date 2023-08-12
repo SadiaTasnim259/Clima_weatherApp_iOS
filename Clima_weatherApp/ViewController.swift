@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
     var weatherViewModel = WeatherViewModel()
+    let locationManager = CLLocationManager()
+    
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var weatherConditionView: UIImageView!
     @IBOutlet weak var temparatureLabel: UILabel!
@@ -20,6 +23,9 @@ class ViewController: UIViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(gestureRecognizer)
         weatherViewModel.delegate = self
+        locationManager.delegate = self
+        locationManager.requestLocation()
+        locationManager.requestWhenInUseAuthorization()
     }
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
@@ -53,6 +59,10 @@ extension ViewController: WeatherProtocol{
     func showWeatherError(error: Error) {
         self.showToast(message: error.localizedDescription, bottomPadding: 120)
     }
+}
+
+extension ViewController: CLLocationManagerDelegate{
+    
 }
 
                                                                         
