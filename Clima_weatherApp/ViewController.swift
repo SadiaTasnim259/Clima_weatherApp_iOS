@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(gestureRecognizer)
         weatherViewModel.delegate = self
         locationManager.delegate = self
-        locationManager.requestLocation()
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
     }
     
     @IBAction func locationButtonPressed(_ sender: UIButton) {
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         
         weatherViewModel.getWeatherData(cityName: cityName)
         searchTextField.resignFirstResponder()
-        cityNameLabel.text = cityName
+        
     }
     
     @objc func hideKeyboard(){
@@ -53,6 +53,7 @@ class ViewController: UIViewController {
 
 extension ViewController: WeatherProtocol{
     func showWeatherData(weatherModel: WeatherModel) {
+        cityNameLabel.text = weatherModel.cityName
         temparatureLabel.text = "\(weatherModel.temperatureString)"
         weatherConditionView.image = UIImage(systemName: weatherModel.ConditionName)
     }
