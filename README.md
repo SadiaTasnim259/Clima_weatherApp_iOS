@@ -2,8 +2,8 @@
 GET API With Core Location
 
 ## What is it?
-- BMI Calculator is an app where people can check their BMI.
-- Here people can see if they are underweight, overweight, or perfectly healthy.
+- Weather App where weather updates can be gotten by Location and by city name.
+
 
 | App Walkthrough | Search by Location Screen | Search by Name Screen |
 | --- | --- | --- |
